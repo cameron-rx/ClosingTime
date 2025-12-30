@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - HTMXTodo</title>
+    <script type="importmap"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="~/HTMXTodo.styles.css" asp-append-version="true" />
+    <link href="https://cdn.jsdelivr.net/npm/beercss@3.13.1/dist/cdn/beer.min.css" rel="stylesheet" />
+    <script type="module" src="https://cdn.jsdelivr.net/npm/beercss@3.13.1/dist/cdn/beer.min.js"></script>
+    <script type="module"
+        src="https://cdn.jsdelivr.net/npm/material-dynamic-colors@1.1.2/dist/cdn/material-dynamic-colors.min.js"></script>
+
+</head>
+
+<body>
+    <nav class="top">
+        <button class="circle transparent">
+            <i>menu</i>
+        </button>
+        <div class="max"></div>
+        <button class="circle transparent">
+            <i>account_circle</i>
+        </button>
+
+    </nav>
+    <nav class="bottom">
+        <a>
+            <i>home</i>
+        </a>
+        <a>
+            <i>search</i>
+        </a>
+        <button class="square round extra">
+            <i>add</i>
+        </button>
+        <a>
+            <i>share</i>
+        </a>
+        <a>
+            <i>more_vert</i>
+        </a>
+    </nav>
+
+    <main class="responsive">
+        @RenderBody()
+    </main>
+
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
