@@ -1,3 +1,5 @@
+using AspNet.Security.OAuth.Discord;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
@@ -9,5 +11,14 @@ public class LoginModel : PageModel
     {
 
     }
+
+    public IActionResult OnPost()
+    {
+        return Challenge(new AuthenticationProperties 
+        { 
+            RedirectUri = "/" // Where to go after Discord says "Yes"
+        }, DiscordAuthenticationDefaults.AuthenticationScheme);
+    }
+    
 
 }

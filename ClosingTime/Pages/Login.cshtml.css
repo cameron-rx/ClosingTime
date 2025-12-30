@@ -1,0 +1,20 @@
+#logo {
+    width: 50%;
+    height: auto;
+}
+
+.blurple-btn {
+  /* Discord Official Brand Color */
+  background-color: #5865F2 !important; 
+  color: white !important;
+  border: none;
+  /* Beer CSS usually handles rounding, but you can ensure a "pill" look: */
+  border-radius: 100px; 
+  gap: 12px; /* Spacing between logo and text */
+  transition: opacity 0.2s;
+}
+
+.blurple-btn:hover {
+  opacity: 0.9;
+  filter: brightness(1.1);
+}
