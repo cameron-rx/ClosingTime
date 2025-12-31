@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@using ClosingTime.Extensions
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -15,32 +16,17 @@
 </head>
 
 <body>
-    <nav class="top">
+    <nav class="bottom fixed">
         <button class="circle transparent">
-            <i>menu</i>
-        </button>
-        <div class="max"></div>
-        <button class="circle transparent">
-            <i>account_circle</i>
-        </button>
-
-    </nav>
-    <nav class="bottom">
-        <a>
             <i>home</i>
-        </a>
-        <a>
-            <i>search</i>
-        </a>
-        <button class="square round extra">
+        </button>
+        <button class="circle transparent">
             <i>add</i>
         </button>
-        <a>
-            <i>share</i>
-        </a>
-        <a>
-            <i>more_vert</i>
-        </a>
+        <button class="circle transparent">
+            <img class="responsive" src=@User.GetAvatarUrl() />
+        </button>
+
     </nav>
 
     <main class="responsive">
